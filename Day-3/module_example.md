@@ -39,10 +39,11 @@ Example variables.tf:
 variable "ami_id" {
   description = "The AMI ID for the instance"
 }
-```
 variable "instance_type" {
   description = "The instance type for the instance"
 }
+```
+
 Example outputs.tf:
 ```
 output "instance_public_ip" {
