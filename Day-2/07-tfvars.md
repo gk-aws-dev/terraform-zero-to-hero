@@ -31,7 +31,7 @@ terraform apply -var-file=dev.tfvars
 By using `.tfvars` files, you can keep your Terraform code more generic and flexible while tailoring configurations to different scenarios and environments.
 
 
-
+```
 [root@ip-172-31-17-17 terraform]# cat main.tf 
 provider "aws" {
   alias = "us-east-1"
@@ -68,4 +68,5 @@ variable "instance_name" {
 instance_type = "t2.micro"
 instance_name = "terra_instance"
 [root@ip-172-31-17-17 terraform]# 
-[root@ip-172-31-17-17 terraform]# 
+[root@ip-172-31-17-17 terraform]#
+```
