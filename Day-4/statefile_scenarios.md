@@ -18,6 +18,8 @@ Terraform is an Infrastructure as Code (IaC) tool used to define and provision i
 
 2. **Versioning Complexity**: Managing state files in VCS can lead to complex versioning issues, especially when multiple team members are working on the same infrastructure.
 
+   3. suppose we deleted the state file and executed the main.tf after that, then terraform will create the resource again, even its created already.
+
 **Overcoming Disadvantages with Remote Backends (e.g., S3):**
 
 A remote backend stores the Terraform state file outside of your local file system and version control. Using S3 as a remote backend is a popular choice due to its reliability and scalability. Here's how to set it up:
