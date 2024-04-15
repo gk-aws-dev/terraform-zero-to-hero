@@ -29,3 +29,43 @@ terraform apply -var-file=dev.tfvars
 ```
 
 By using `.tfvars` files, you can keep your Terraform code more generic and flexible while tailoring configurations to different scenarios and environments.
+
+
+
+[root@ip-172-31-17-17 terraform]# cat main.tf 
+provider "aws" {
+  alias = "us-east-1"
+  region = "us-east-1"
+}
+
+provider "aws" {
+  alias = "us-west-2"
+  region = "us-west-2"
+}
+
+resource "aws_instance" "example" {
+  ami = "ami-0a699202e5027c10d"
+  instance_type = var.instance_type
+  provider = aws.us-east-1
+
+  tags = {
+    Name = var.instance_name
+  }
+}
+[root@ip-172-31-17-17 terraform]# 
+[root@ip-172-31-17-17 terraform]# cat varibles.tf 
+variable "instance_type" {
+  description = "The type of EC2 instance to launch"
+  type        = string
+}
+
+variable "instance_name" {
+  description = "The name of the instance"
+  type        = string
+}
+[root@ip-172-31-17-17 terraform]# 
+[root@ip-172-31-17-17 terraform]# cat dev.tfvars 
+instance_type = "t2.micro"
+instance_name = "terra_instance"
+[root@ip-172-31-17-17 terraform]# 
+[root@ip-172-31-17-17 terraform]# 
