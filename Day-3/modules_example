@@ -4,7 +4,7 @@ They allow you to package infrastructure components into reusable building block
 
 Here's how you can use Terraform modules:
 
-1. **Creating a Module**:
+1. #Creating a Module:
 You create a Terraform module by organizing your configuration files into a directory. This directory should contain at least one .tf file with 
 the Terraform configuration. You can organize your modules in a way that makes sense for your project's structure.
 
