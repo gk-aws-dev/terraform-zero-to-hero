@@ -24,6 +24,8 @@ Here's how you typically use `.tfvars` files
 
 3. When running Terraform commands (e.g., terraform apply, terraform plan), you can specify which .tfvars file(s) to use with the -var-file option:
 
+4.by default terraform will take the terraform.tfvars file, if you want to give the specific name to the file (dev.tfvars, stg.tfvars), you can do that, but we have to mention that file in terraform apply command. 
+
 ```
 terraform apply -var-file=dev.tfvars
 ```
