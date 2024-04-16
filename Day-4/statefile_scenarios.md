@@ -47,6 +47,15 @@ A remote backend stores the Terraform state file outside of your local file syst
 
    To enable state locking, create a DynamoDB table and provide its name in the `dynamodb_table` field. This prevents concurrent access issues when multiple users or processes run Terraform.
 
+   **advantages for the locking state file with dynamo db**
+
+1.Preventing Conflicts: State locking prevents multiple users or processes from modifying the state file simultaneously, reducing the risk of conflicts and data corruption.
+
+2.Ensuring Consistency: By ensuring that only one process can modify the state file at a time, state locking helps maintain the consistency and integrity of the managed infrastructure.
+
+3.Facilitating Collaboration: State locking enables collaboration among team members by allowing them to work on Terraform configurations concurrently without risking data loss or corruption.
+
+
 **State Locking with DynamoDB:**
 
 DynamoDB is used for state locking when a remote backend is configured. It ensures that only one user or process can modify the Terraform state at a time. Here's how to create a DynamoDB table and configure it for state locking:
@@ -112,11 +121,3 @@ By following these steps, you can securely store your Terraform state in S3 with
 ```
 
 Please note that you should adapt the configuration and commands to your specific AWS environment and requirements.
-
-**advantages for the locking state file with dynamo db**
-
-1.Preventing Conflicts: State locking prevents multiple users or processes from modifying the state file simultaneously, reducing the risk of conflicts and data corruption.
-
-2.Ensuring Consistency: By ensuring that only one process can modify the state file at a time, state locking helps maintain the consistency and integrity of the managed infrastructure.
-
-3.Facilitating Collaboration: State locking enables collaboration among team members by allowing them to work on Terraform configurations concurrently without risking data loss or corruption.
