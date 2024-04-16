@@ -112,3 +112,11 @@ By following these steps, you can securely store your Terraform state in S3 with
 ```
 
 Please note that you should adapt the configuration and commands to your specific AWS environment and requirements.
+
+**advantages for the locking state file with dynamo db**
+
+1.Preventing Conflicts: State locking prevents multiple users or processes from modifying the state file simultaneously, reducing the risk of conflicts and data corruption.
+
+2.Ensuring Consistency: By ensuring that only one process can modify the state file at a time, state locking helps maintain the consistency and integrity of the managed infrastructure.
+
+3.Facilitating Collaboration: State locking enables collaboration among team members by allowing them to work on Terraform configurations concurrently without risking data loss or corruption.
