@@ -1,5 +1,6 @@
 # terraform workspaces
 
+```
 [root@ip-172-31-17-17 terraform]# terraform workspace -h
 Usage: terraform [global options] workspace
 
@@ -13,7 +14,9 @@ Subcommands:
     show      Show the name of the current workspace
 [root@ip-172-31-17-17 terraform]# 
 
+```
 --------------------------------------------------------------------
+```
 [root@ip-172-31-17-17 terraform]# tree
 .
 ├── main.tf
@@ -28,5 +31,5 @@ Subcommands:
 └── variables.tf
 
 5 directories, 5 files
-
+```
 -------------------------------------------------------------------
