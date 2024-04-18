@@ -36,6 +36,7 @@ The advantage of using Terraform modules in your infrastructure as code (IaC) pr
 2 directories, 5 files
 [root@ip-172-31-17-17 terraform]# 
 
+**below are the files from terraform folder**
 
 ```
 [root@ip-172-31-17-17 terraform]# 
@@ -50,6 +51,9 @@ module "ec2_instance" {
   instance_type_value = var.instance_type
   subnet_id_value     = var.subnet_id
 }
+
+```
+```
 [root@ip-172-31-17-17 terraform]# 
 [root@ip-172-31-17-17 terraform]# cat variables.tf 
 variable "ami" {
@@ -63,7 +67,11 @@ variable "instance_type" {
 variable "subnet_id" {
   description = "Subnet ID for the EC2 instance"
 }
-[root@ip-172-31-17-17 terraform]# 
+[root@ip-172-31-17-17 terraform]#
+
+```
+
+```
 [root@ip-172-31-17-17 terraform]# cat terraform.tfvars 
 ami = "ami-053b0d53c279acc90"
 instance_type = "t2.micro"
