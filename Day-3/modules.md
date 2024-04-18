@@ -82,7 +82,7 @@ subnet_id = "subnet-0d06fb5505dab0c7f"
 
 ```
 
-**below are the files from the modules folder **
+**below are the files from the modules folder**
 ```
 [root@ip-172-31-17-17 terraform]# 
 [root@ip-172-31-17-17 terraform]# cat modules/ec2_instance/main.tf 
