@@ -81,3 +81,36 @@ subnet_id = "subnet-0d06fb5505dab0c7f"
 [root@ip-172-31-17-17 terraform]#
 
 ```
+
+**below are the files from the modules folder **
+```
+[root@ip-172-31-17-17 terraform]# 
+[root@ip-172-31-17-17 terraform]# cat modules/ec2_instance/main.tf 
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+    ami = var.ami_value
+    instance_type = var.instance_type_value
+    subnet_id = var.subnet_id_value
+}
+[root@ip-172-31-17-17 terraform]#
+```
+```
+[root@ip-172-31-17-17 terraform]# cat modules/ec2_instance/variables.tf 
+variable "ami_value"{
+  description = "this is the ami value"
+
+}
+variable "instance_type_value"{
+  description = "this is the instance type"
+
+}
+variable "subnet_id_value"{
+  description = "this is the subnet id"
+
+}
+[root@ip-172-31-17-17 terraform]# 
+[root@ip-172-31-17-17 terraform]#
+```
