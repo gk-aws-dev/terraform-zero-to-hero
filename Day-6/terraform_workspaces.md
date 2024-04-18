@@ -33,3 +33,8 @@ Subcommands:
 5 directories, 5 files
 ```
 -------------------------------------------------------------------
+
+lets create all above files and folder, you will see all above in Day3 folder.
+
+now create the workspace and switch into it
+once we execute the terafom apply command after switching it into env, then state file will create in that perticular workspace.
