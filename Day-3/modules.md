@@ -22,7 +22,7 @@ The advantage of using Terraform modules in your infrastructure as code (IaC) pr
 
 
 #module example
-
+```
 [root@ip-172-31-17-17 terraform]# tree 
 .
 ├── main.tf
@@ -34,7 +34,8 @@ The advantage of using Terraform modules in your infrastructure as code (IaC) pr
 └── variables.tf
 
 2 directories, 5 files
-[root@ip-172-31-17-17 terraform]# 
+[root@ip-172-31-17-17 terraform]#
+```
 
 **below are the files from terraform folder**
 
