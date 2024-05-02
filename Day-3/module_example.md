@@ -10,11 +10,12 @@ the Terraform configuration. You can organize your modules in a way that makes s
 
 For example, let's create a simple module named example:
 
+```
 example/
   ├── main.tf
   ├── variables.tf
   └── outputs.tf
-
+```
   
 2. **Defining Resources in the Module**
 Inside the main.tf file of your module, define the resources you want to include in the module. You can use variables to parameterize 
